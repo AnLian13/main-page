@@ -164,40 +164,97 @@ nav {
   transition: 0.5s;
 }
 
-.inter {
-            width: 768px;
-            height: 546px;
-            display: block;
-            margin-bottom: 60px;
-            margin-top: 60px;
-           
-        }
-       
-        /* * {
-            margin: 0;
-            box-sizing: border-box;
-        } */
-
-        area {
-            cursor: url(pointer_5987590.png), auto;
+.container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            /* gap: 100px 50px; */
+            padding: 100px 26px;
         }
 
-      
-        section {
-            width: 968px;
-            margin: 0 auto;
+        .container .card {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 350px;
+            height: 300px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+            transition: 0.5s;
         }
 
-    
-      .inter {
-            width: 800px;
-            /* height: 800px; */
-            display: block;
-            margin-bottom: 60px;
-            margin-top: 60px;
-            
+        .container .card:hover {
+            height: 400px;
         }
-        *{margin: 0px; padding: 0px}
+
+        .container .card .imgBx {
+            position: absolute;
+            top: 20px;
+            width: 300px;
+            height: 220px;
+            /* background: #333; */
+            border-radius: 12px;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        .container .card:hover .imgBx {
+            top: -100px;
+            scale: 0.75;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.2);
+        }
+
+        .container .card .imgBx img {
+            position: absolute;
+            top: 0;
+            left: 51px;
+            width: 200px;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .container .card .content {
+            position: absolute;
+            top: 252px;
+            width: 100%;
+            /* padding: 0 30px; */
+            height: 35px;
+            overflow: hidden;
+            text-align: center;
+            transition: 0.5s;
+        }
+        .container .card:hover .content {
+            top: 130px;
+            height: 250px;
+        }
+
+        .container .card .content h2 {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: var(--clr);
+            margin: 5px;
+        }
+
+        .container .card .content p {
+            color: #333;
+            font-size: 1.05em;
+        }
+        .container .card .content a {
+            position: relative;
+            top: 15px;
+            display: inline-block;
+            padding: 12px 25px;
+            background: var(--clr);
+            color: #fff;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: -27px;
+        }
 
 body{
   background:#002041;
@@ -208,6 +265,10 @@ h1, button{
   color:#fff;
   text-align: center;
   padding: 20px;
+}
+
+h2 {
+  padding: 1px;
 }
 
 p{
@@ -231,8 +292,8 @@ a:hover{
 }
 
 .sub-main{
-  width: 30%;
-  margin:22px;
+  /* width: 30%;
+  margin:22px; */
   float: left;
 }
 
@@ -240,20 +301,16 @@ a:hover{
   text-align: center;
   cursor: pointer;
   font-size:24px;
-  margin: 0 0 0 100px;
+  /* margin: 0 0 0 100px; */
 }
-
-
-
-
 
 /*Button Two*/
 .button-two {
   border-radius: 4px;
   background-color:#d35400;
   border: none;
-  padding: 20px;
-  width: 400px;
+  /* padding: 20px; */
+  width: 200px;
   transition: all 0.5s;
 }
 
@@ -283,10 +340,6 @@ a:hover{
   right: 0;
 }
 
-
-
-      
-      
 </style>
 </head>
 
@@ -324,29 +377,79 @@ a:hover{
                 Вы обратились по адресу!
             </p>
 <h2>Я создаю:</h2>
+<h3>Кликните на изображение, чтобы узнать больше</h3>
 <br>
-  <section class="inter">
-      <img class="main-picture" src="collage (7).png" alt="flowers_foto" style="margin:0px auto 0px auto; display:block" usemap="#imgmap202435174137">
-      <map name="imgmap202435174137">
-        <map id="imgmap202410191645" name="imgmap202410191645">
-          <area shape="rect" alt="" title="Электронные календари, распечатать которые вы сможете в типографиях своего города" coords="22,27,241,236" href="" target="" />
-          <area shape="rect" alt="" title="Электронную игру Найди пару с любыми персонажами" coords="260,15,482,230" href="" target="" />
-          <area shape="rect" alt="" title="Квадратные мыльные пузыри" coords="258,260,481,480" href="" target="" />
-          <area shape="rect" alt="" title="Колоду Таро с любыми персонажами" coords="23,258,235,481" href="" target="" /><!-- Created by Online Image Map Editor (http://www.maschek.hu/imagemap/index) --></map>
-      </map>
-          </div>
-          </map> 
-        <h4>Наведите курсор на изображение, чтобы узнать больше. </h4>
-  </section>
-  <br>
+<div class="container">
+  <div class="card" style="--clr:#030bf4;">
+  <div class="imgBx">
+      <img src="Screenshot_20240128-210635_1.png">
+  </div>
+  <div class="content">
+      <h2>Колоду Таро</h2><br>
+      <p>На картах которой могут быть ваши любимые персонажи
+      </p>
+      <!-- <a href="https://olgina-04.wixsite.com/website/заказать-консультацию">Заказать</a> -->
+  </div>
+</div>
+<div class="container">
+  <div class="card" style="--clr:#030bf4;">
+  <div class="imgBx">
+      <img src="Календарь2025.png">
+  </div>
+  <div class="content">
+      <h2>Электронные календари</h2><br>
+      <p>Распечатать которые вы сможете в типографиях своего города. <br> 
+      </p>
+      <!-- <a href="https://olgina-04.wixsite.com/website/заказать-консультацию">Заказать</a> -->
+  </div>
+</div>
+</div>
+<div class="container">
+  <div class="card" style="--clr:#030bf4;">
+  <div class="imgBx">
+      <img src="11zon_cropped (49).png">
+  </div>
+  <div class="content">
+      <h2>Игру "Найди пару"</h2><br>
+      <p>Она поможет развить память и полюбоваться на любимых персонажей.
+          
+      </p>
+      
+  </div>
+</div>
+<div class="container">
+  <div class="card" style="--clr:#030bf4;">
+  <div class="imgBx">
+      <img src="2024-01-20_19-07-24.png">
+  </div>
+  <div class="content">
+      <h2>Квадратные мыльные пузыри</h2><br>
+      <p>Это необычный спецэффект, который поможет сделать ваш сайт уникальнее <br> 
+      </p>
+     
+  </div>
+</div>
+</div>
+<div class="card" style="--clr:#000000;">
+  <div class="imgBx">
+
+  </div>
+  <div class="content">
+      <h2>И многое другое</h2><br>
+      <p>Перейти на мою дизайн-студию и узнать больше вы сможете, кликнув по кнопке ниже
+      </p>
+      <a href="https://makinganorder.tilda.ws/">Заказать</a>
+  </div>
+</div>
+
   
-<h3>Перейти на мою дизайн-студию и узнать больше вы сможете, кликнув по кнопке ниже</h3>
+<!-- <h3>Перейти на мою дизайн-студию и узнать больше вы сможете, кликнув по кнопке ниже</h3>
 <br>
 <div class="sub-main">
   <button class="button-two">
     <a href="https://makinganorder.tilda.ws/">
     <span>Перейти на дизайн-студию</span></a></button>
-</div>
+</div> -->
 
 
 
